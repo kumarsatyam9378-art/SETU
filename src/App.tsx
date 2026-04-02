@@ -18,6 +18,9 @@ import ProfilePage from './pages/customer/ProfilePage'
 // Business Pages
 import BusinessLayout from './pages/business/BusinessLayout'
 import BusinessDashboard from './pages/business/BusinessDashboard'
+import OnboardingSelect from './pages/business/onboarding/OnboardingSelect'
+import RestaurantOnboarding from './pages/business/onboarding/RestaurantOnboarding'
+import CafeOnboarding from './pages/business/onboarding/CafeOnboarding'
 
 export default function App() {
   return (
@@ -58,7 +61,9 @@ export default function App() {
         </Route>
 
         {/* Business Routes */}
-        <Route path="/business/onboarding" element={<PlaceholderPage title="Business Onboarding" />} />
+        <Route path="/business/onboarding" element={<OnboardingSelect />} />
+        <Route path="/business/onboarding/restaurant" element={<RestaurantOnboarding />} />
+        <Route path="/business/onboarding/cafe" element={<CafeOnboarding />} />
         <Route path="/business" element={<BusinessLayout />}>
           <Route index element={<BusinessDashboard />} />
           <Route path="orders" element={<PlaceholderPage title="Business Orders" />} />
